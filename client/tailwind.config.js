@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       height: theme => ({
-        "screen/2": "calc(100vh / 2)",
+        'screen/2': 'calc(50vh)',
+        'screen-audio': 'calc(100vh - 40px)',
+        'screen/2-audio': 'calc(50vh - 40px)',
       }),
     },
   },
