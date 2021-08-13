@@ -54,13 +54,13 @@ const Song = () => {
       style={{ backgroundImage: `url(${data.song.image})` }}
     >
       {data.song.title.length !== 0 ? (
-        <p className="absolute top-0 left-0 lg:top-5 lg:left-5 text-white text-sm lg:text-l bg-black p-2 text-center w-full lg:w-auto">
+        <p className="absolute top-0 left-0 lg:top-5 lg:left-5 text-white text-sm lg:text-xl bg-black p-2 text-center w-full lg:w-auto">
           ▶️ {data.song.title}
         </p>
       ) : null}
 
       {data.song.description.length !== 0 ? (
-        <p className="absolute bottom-0 left-0 lg:bottom-5 lg:left-5 text-white text-sm lg:text-xl bg-black text-center p-2 w-full lg:w-auto">
+        <p className="absolute bottom-0 left-0 lg:bottom-5 lg:left-5 text-white text-sm lg:text-2xl bg-black text-center p-2 w-full lg:w-auto">
           {data.song.description}
         </p>
       ) : null }
