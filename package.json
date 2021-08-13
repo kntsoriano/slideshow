@@ -1,0 +1,22 @@
+{
+  "name": "slideshow",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.ts",
+    "build": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "15.6.0"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.8"
+  }
+}
