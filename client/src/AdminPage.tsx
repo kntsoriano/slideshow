@@ -44,11 +44,11 @@ const SongForm = ({ defaultSong }: { defaultSong: SongType }) => {
   return (
     <form onSubmit={onSubmit}>
       <label className="block mb-1" htmlFor="title">Title</label>
-      <input className="w-full mb-1" required type="text" id="title" value={song.title} onChange={(e) => setSong({ ...song, title: e.target.value })} />
+      <input className="w-full mb-1" type="text" id="title" value={song.title} onChange={(e) => setSong({ ...song, title: e.target.value })} />
       <label className="block mb-1" htmlFor="image">Image</label>
-      <input className="w-full mb-1" required type="text" id="image" value={song.image} onChange={(e) => setSong({ ...song, image: e.target.value })} />
+      <input className="w-full mb-1" type="text" id="image" value={song.image} onChange={(e) => setSong({ ...song, image: e.target.value })} />
       <label className="block mb-1" htmlFor="description">Description</label>
-      <textarea className="w-full mb-1" required id="description" value={song.description} onChange={(e) => setSong({ ...song, description: e.target.value })} />
+      <textarea className="w-full mb-1" id="description" value={song.description} onChange={(e) => setSong({ ...song, description: e.target.value })} />
       <button className="block">Submit</button>
     </form>
   )
