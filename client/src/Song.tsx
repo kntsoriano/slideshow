@@ -2,15 +2,6 @@ import React from 'react'
 import { useQuery } from 'react-query'
 import { SongType } from './types'
 
-function SongPage() {
-	return (
-    <div className="md:flex">
-      <Song />
-      <Chat />
-    </div>
-	)
-}
-
 const Song = () => {
   const { data, status } = useQuery<{ song: SongType }>(
     'song',
@@ -68,24 +59,5 @@ const Song = () => {
   )
 }
 
-const Chat = () => {
-  return (
-    <div className="w-full md:w-1/5">
-      <audio
-        controls
-        autoPlay
-        className="w-full"
-        src="https://booth.clubindoors.com/stream"
-      >
-        Your browser does not support the audio tag.
-      </audio>
-      <iframe
-        className="w-full h-screen/2-audio md:h-screen-audio"
-        title="Chat room"
-        src="https://hack.chat/?boom"
-      />
-    </div>
-  );
-}
 
-export default SongPage;
+export default Song;
