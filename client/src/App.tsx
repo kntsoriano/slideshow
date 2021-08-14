@@ -25,7 +25,7 @@ const App = () => {
           </Route>
           <Route path="/">
             <div className="md:flex">
-              <Video src="https://www.youtube.com/embed/n9Rq1BGZHbM" />
+              <Video src="https://www.youtube.com/embed/AOKFeTPHomk" />
               <Chat showAudio={false} />
             </div>
           </Route>
