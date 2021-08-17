@@ -1,6 +1,6 @@
 import React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Redirect, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './index.css'
 import Song from './Song';
 import Chat from './Chat';
@@ -8,6 +8,9 @@ import AdminPage from './AdminPage';
 import Video from './Video';
 
 const queryClient = new QueryClient();
+
+// TODO replace with env var to use as a feature flag without having to rebuild.
+const redirectToLandingPage = true;
 
 const App = () => {
   return (
@@ -23,11 +26,22 @@ const App = () => {
               <Chat showAudio />
             </div>
           </Route>
-          <Route path="/">
+          <Route path="/soon">
+            Coming soon!
+          </Route>
+          <Route path="/dj">
             <div className="md:flex">
               <Video src="https://www.youtube.com/embed/AOKFeTPHomk" />
               <Chat showAudio={false} />
             </div>
+          </Route>
+          <Route path="/"
+            render={() => {
+              return redirectToLandingPage ?
+                <Redirect to="/soon" /> :
+                <Redirect to="/dj" />
+            }}
+            >
           </Route>
         </Switch>
       </Router>
