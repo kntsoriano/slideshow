@@ -6,6 +6,7 @@ import Song from './Song';
 import Chat from './Chat';
 import AdminPage from './AdminPage';
 import Video from './Video';
+import Landing from './Landing';
 
 const queryClient = new QueryClient();
 
@@ -27,7 +28,7 @@ const App = () => {
             </div>
           </Route>
           <Route path="/soon">
-            Coming soon!
+            <Landing />
           </Route>
           <Route path="/dj">
             <div className="md:flex">
