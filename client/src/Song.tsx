@@ -42,7 +42,7 @@ const Song = () => {
   return (
     <div
       className="w-full md:w-4/5 bg-contain bg-no-repeat bg-center bg-black relative h-screen/2 md:h-auto"
-      style={{ backgroundImage: `url(${data.song.image})` }}
+      style={{ backgroundImage: `url('${data.song.image}')` }}
     >
       {data.song.title.length !== 0 ? (
         <p className="absolute top-0 left-0 lg:top-5 lg:left-5 text-white text-sm lg:text-xl bg-black p-2 text-center w-full lg:w-auto">

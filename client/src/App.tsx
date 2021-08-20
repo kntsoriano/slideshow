@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { Redirect, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './index.css'
 import Song from './Song';
+import Cartfilling from './Cartfilling';
 import Chat from './Chat';
 import AdminPage from './AdminPage';
 import Video from './Video';
@@ -26,6 +27,9 @@ const App = () => {
               <Song />
               <Chat showAudio />
             </div>
+          </Route>
+          <Route path="/cartfilling">
+            <Cartfilling />
           </Route>
           <Route path="/soon">
             <Landing />
