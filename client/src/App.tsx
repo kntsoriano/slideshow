@@ -12,7 +12,7 @@ import Landing from './Landing';
 const queryClient = new QueryClient();
 
 // TODO replace with env var to use as a feature flag without having to rebuild.
-const redirectToLandingPage = true;
+const redirectToLandingPage = false;
 
 const App = () => {
   return (
@@ -42,10 +42,7 @@ const App = () => {
           </Route>
           <Route path="/"
             render={() => {
-              return redirectToLandingPage ?
-                <Redirect to="/soon" /> :
-                <Redirect to="/dj" />
-            }}
+              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/cartfilling" /> }}
             >
           </Route>
         </Switch>
