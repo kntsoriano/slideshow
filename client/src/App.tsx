@@ -12,7 +12,7 @@ import Landing from './Landing';
 const queryClient = new QueryClient();
 
 // TODO replace with env var to use as a feature flag without having to rebuild.
-const redirectToLandingPage = false;
+const redirectToLandingPage = true;
 
 const App = () => {
   return (
