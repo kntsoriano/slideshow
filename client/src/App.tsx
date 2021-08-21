@@ -2,12 +2,12 @@ import React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Redirect, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './index.css'
-import Song from './Song';
 import Cartfilling from './Cartfilling';
-import Chat from './Chat';
+import Chat from './slideshow/Chat';
 import AdminPage from './AdminPage';
 import Video from './Video';
 import Landing from './Landing';
+import Slideshow from './Slideshow';
 
 const queryClient = new QueryClient();
 
@@ -22,11 +22,8 @@ const App = () => {
           <Route path="/admin">
             <AdminPage />
           </Route>
-          <Route path="/song">
-            <div className="md:flex">
-              <Song />
-              <Chat showAudio />
-            </div>
+          <Route path="/slideshow">
+            <Slideshow />
           </Route>
           <Route path="/cartfilling">
             <Cartfilling />
@@ -42,7 +39,7 @@ const App = () => {
           </Route>
           <Route path="/"
             render={() => {
-              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/cartfilling" /> }}
+              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/slideshow" /> }}
             >
           </Route>
         </Switch>

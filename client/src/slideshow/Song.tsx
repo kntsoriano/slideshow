@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from 'react-query'
-import { SongType } from './types'
+import { SongType } from '../types'
 
 const Song = () => {
   const { data, status } = useQuery<{ song: SongType }>(
