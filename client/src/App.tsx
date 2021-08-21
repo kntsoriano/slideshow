@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/admin">
             <AdminPage />
           </Route>
-          <Route path="/slideshow">
+          <Route path="/live">
             <Slideshow />
           </Route>
           <Route path="/cartfilling">
@@ -39,7 +39,7 @@ const App = () => {
           </Route>
           <Route path="/"
             render={() => {
-              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/slideshow" /> }}
+              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/live" /> }}
             >
           </Route>
         </Switch>
