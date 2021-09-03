@@ -12,7 +12,7 @@ import Slideshow from './Slideshow';
 const queryClient = new QueryClient();
 
 // TODO replace with env var to use as a feature flag without having to rebuild.
-const redirectToLandingPage = true;
+const redirectToLandingPage = false;
 
 const App = () => {
   return (
@@ -39,7 +39,7 @@ const App = () => {
           </Route>
           <Route path="/"
             render={() => {
-              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/live" /> }}
+              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/cartfilling" /> }}
             >
           </Route>
         </Switch>
