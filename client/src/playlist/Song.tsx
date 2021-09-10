@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import { SongType } from '../types'
+import { Audio } from './Audio'
 
 const Song = () => {
   const showTitle = 'concon'
@@ -105,14 +106,7 @@ const Song = () => {
             {data.song.title}
           </p>
         ) : null}
-        <audio
-          controls
-          autoPlay
-          className="w-50 m-auto"
-          src="https://booth.clubindoors.com/stream"
-        >
-          Your browser does not support the audio tag.
-        </audio>
+        <Audio />
       </div>
     </div>
   );
