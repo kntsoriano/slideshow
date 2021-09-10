@@ -3,6 +3,8 @@ import { useQuery } from 'react-query'
 import { SongType } from '../types'
 
 const Song = () => {
+  const showTitle = 'concon'
+  const showGrain = false
   const { data, status } = useQuery<{ song: SongType }>(
     'song',
     () => fetch('/api/song').then((res) => res.json()),
@@ -52,7 +54,7 @@ const Song = () => {
             "url('https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?raw=1')",
           width: "500%",
           height: "500%",
-          opacity: "0.3",
+          opacity: showGrain ? "0.3" : "0.05",
           position: "fixed",
         }}
       />
@@ -64,8 +66,26 @@ const Song = () => {
             color: '#60ac39'
           }}
         >
-          live now: cartfilling
+          live now{showTitle ? `: ${showTitle}` : null}
         </p>
+        <div
+          className="absolute bottom-5 left-0 lg:left-5 lg:bottom-20 text-white lg:text-xs text-center text-xs w-full lg:w-auto"
+          style={{
+            fontFamily: "'DejaVu Sans Mono', monospace",
+          }}
+        >
+          <a
+            style={{
+              fontFamily: "'DejaVu Sans Mono', monospace",
+              color: 'rgb(184, 84, 212)'
+            }}
+            href="https://discord.gg/JADPcZUDhC"
+            target="_blank"
+            rel="noreferrer"
+          >
+            * join our discord
+          </a>
+        </div>
         <img
           src={data.song.image}
           alt={data.song.title}

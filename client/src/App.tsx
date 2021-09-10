@@ -2,7 +2,7 @@ import React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Redirect, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './index.css'
-import Cartfilling from './Cartfilling';
+import Playlist from './Playlist';
 import Chat from './slideshow/Chat';
 import AdminPage from './AdminPage';
 import Video from './Video';
@@ -12,7 +12,7 @@ import Slideshow from './Slideshow';
 const queryClient = new QueryClient();
 
 // TODO replace with env var to use as a feature flag without having to rebuild.
-const redirectToLandingPage = true;
+const redirectToLandingPage = false;
 
 const App = () => {
   return (
@@ -23,10 +23,10 @@ const App = () => {
             <AdminPage />
           </Route>
           <Route path="/live">
-            <Slideshow />
+            <Playlist />
           </Route>
           <Route path="/cartfilling">
-            <Cartfilling />
+            <Playlist />
           </Route>
           <Route path="/soon">
             <Landing />
@@ -39,7 +39,7 @@ const App = () => {
           </Route>
           <Route path="/"
             render={() => {
-              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/cartfilling" /> }}
+              return redirectToLandingPage ?  <Redirect to="/soon" /> : <Redirect to="/live" /> }}
             >
           </Route>
         </Switch>

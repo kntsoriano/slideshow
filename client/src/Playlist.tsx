@@ -1,6 +1,6 @@
 import React from 'react'
-import Song from './cartfilling/Song'
-import Chat from './cartfilling/Chat'
+import Song from './playlist/Song'
+import Chat from './playlist/Chat'
 
 const Cartfilling = () => {
   return (
